@@ -13,8 +13,13 @@ int main()
 
   for(int index=0; index<said.length(); index++)
   {
-    char converted = said[index] - ('a' - 'A');
-    cout<<said[index]<<" "<<converted<<endl;
+    char converted = said[index];
+    if( said[index] >= 'a' && said[index] <= 'z' )
+    {
+      converted = said[index] - ('a' - 'A');
+    }
+    said[index] = converted;
+    //cout<<said[index]<<" "<<converted<<endl;
   }
   cout<<"As a shout, you said:\n"<<said<<endl;
 
